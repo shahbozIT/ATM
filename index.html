@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Банкомат</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+    <div class="atm">
+    <!-- Баланс сверху -->
+    <div class="balance-header">
+        <span>Ваш баланс:</span>
+        <span class="balance-amount" id="balance">15 000 ₽</span>
+    </div>
+
+    <!-- Окошко с цифрами -->
+    <div class="screen">
+        <div class="screen-label">Сумма снятия:</div>
+        <div class="screen-display" id="display">0</div>
+        <div class="screen-message" id="message"></div>
+    </div>
+
+    <!-- Кнопки -->
+    <div class="keypad">
+        <button class="btn" onclick="pressDigit('1')">1</button>
+        <button class="btn" onclick="pressDigit('2')">2</button>
+        <button class="btn" onclick="pressDigit('3')">3</button>
+        <button class="btn" onclick="pressDigit('4')">4</button>
+        <button class="btn" onclick="pressDigit('5')">5</button>
+        <button class="btn" onclick="pressDigit('6')">6</button>
+        <button class="btn" onclick="pressDigit('7')">7</button>
+        <button class="btn" onclick="pressDigit('8')">8</button>
+        <button class="btn" onclick="pressDigit('9')">9</button>
+        <button class="btn btn-clear" onclick="clearInput()">C</button>
+        <button class="btn" onclick="pressDigit('0')">0</button>
+        <button class="btn btn-withdraw" onclick="withdraw()">Снять</button>
+    </div>
+
+    <!-- Визуальный слот для денег -->
+    <div class="cash-slot-container">
+        <div class="cash-slot"></div>
+        <div class="slot-label">Выдача наличных</div>
+    </div>
+    </div>
+
+    <script src="main.js"> </script>
+
+    </body>
+</html>
